@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,200" />
+</head>
+
+<body>
+    <div class="card">
+        <div class="icons">
+            <div class="icon-panel">
+                <span class="material-symbols-outlined">
+                    videogame_asset
+                </span>
+            </div>
+        </div>
+        <div class="base">
+            <div class="label">Number of Players:
+                <span>
+                    1
+                </span>
+            </div>
+            <div class="controls">
+                <button role="button" class="button" id="removePlayer" onclick="handleRemovePlayer()">
+                    <span class="material-symbols-outlined">
+                        remove
+                    </span>
+                </button>
+                <button role="button" class="button" id="addPlayer" onclick="handleAddPlayer()">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const icons = document.querySelector('.card .icons')
+        const playerCountSpan = document.querySelector('.label span')
+
+        function handleAddPlayer() {
+            if ((icons.childElementCount) >= 4) return;
+            const newPanel = document.createElement('div')
+
+            newPanel.classList.add('icon-panel')
+            newPanel.innerHTML = ' \
+                <span class="material-symbols-outlined"> \
+                    videogame_asset \
+                </span>'
+            icons.appendChild(newPanel);
+            playerCountSpan.textContent = icons.childElementCount
+        }
+
+        function handleRemovePlayer() {
+            if ((icons.childElementCount) <= 1) return;
+            icons.removeChild(icons.lastChild)
+            playerCountSpan.textContent = icons.childElementCount
+        }
+
+    </script>
+</body>
+
+</html>
