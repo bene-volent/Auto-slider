@@ -80,7 +80,7 @@ body {
 }
 
 .base {
-    background-color: #ff0;
+    background-color: rgb(255, 207, 112);
     display: flex;
     flex-direction: column;
     justify-content: center;
