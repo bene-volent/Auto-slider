@@ -13,7 +13,7 @@ video {
     --background-clr: #ecebe4;
 }
 body {
-    height: 100vh;
+    height: 100dvh;
     display: grid;
     justify-items: center;
     align-items: center;
