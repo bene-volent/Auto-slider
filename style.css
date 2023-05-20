@@ -16,7 +16,7 @@ video {
     --background-clr: #ecebe4;
 }
 body {
-    height: 100vh;
+    height: 100dvh;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -35,6 +35,7 @@ body {
     grid-template-rows: 70% auto;
     overflow: hidden;
     gap: 2rem;
+    margin:auto
 }
 .icons {
     background-color: #f00;
